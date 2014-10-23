@@ -1,0 +1,20 @@
+package ModeloEntidade;
+
+public class Lobo extends Antagonista{
+	private int dano = 18;
+	private double quantidadeVida = 180;
+	
+	public double getQuantidadeVida() {
+		return quantidadeVida;
+	}
+
+	public void setQuantidadeVida(int quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+	
+}

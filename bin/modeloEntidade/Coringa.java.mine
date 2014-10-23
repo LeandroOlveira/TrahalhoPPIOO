@@ -1,0 +1,32 @@
+package ModeloEntidade;
+
+public class Coringa extends Protagonista{	
+	public Coringa (){
+		super();
+		quantidadeVida = 150;
+		nome = "Coringa";
+		dano =15;
+	}
+	
+	public double getQuantidadeVida() {
+		return quantidadeVida;
+	}
+
+	public void setQuantidadeVida(int quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+
+	@Override
+	public int calcularFatorIncremento() {
+		int incremento =  (int) (this.getQuantidadeVida()*fatorIncremento);
+		return incremento;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+
+
+
+}

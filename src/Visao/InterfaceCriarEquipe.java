@@ -31,10 +31,13 @@ import javax.swing.JTable;
 
 import modeloEntidade.Personagem;
 import controle.ControlarEquipeUsuario;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import javax.swing.table.DefaultTableModel;
 
 
 
@@ -77,7 +80,7 @@ public class InterfaceCriarEquipe extends JFrame implements ActionListener {
 				String url;
 				ImageIcon heroiImg;
 				if(comboBox.getSelectedIndex()== 1){
-					url = "/images/AquamanEditado.png";
+					url = "/images/AquamanEditado.jpg";
 					heroiImg = getImage(url);
 					lblFoto.setIcon(heroiImg);			
 				}	
@@ -114,10 +117,6 @@ public class InterfaceCriarEquipe extends JFrame implements ActionListener {
 		btnAdicionar.addActionListener(this);
 		
 		
-		table = new JTable();
-		table.setBounds(532, 48, 230, 330);
-		frame.getContentPane().add(table);
-		
 		
 		JButton btnAdd = new JButton("New button");
 		btnAdd.setBounds(123, 415, 300, 400);
@@ -139,20 +138,9 @@ public class InterfaceCriarEquipe extends JFrame implements ActionListener {
 		ImageIcon heroiImg = new ImageIcon();
 
 		switch (btnName) {
-		case "Aquaman":
-			nome = "Aquaman";
-			url = "/images/AquamanEditado.png";
-			heroiImg = getImage(url);
-			lblFoto.setIcon(heroiImg);
-			break;
-		case "Batman":
-			url = "/images/batmanEditado.jpg";
-			heroiImg = getImage(url);
-			lblFoto.setIcon(heroiImg);
-			break;
 		case "Adicionar":
 			ControlarEquipeUsuario equipe = new ControlarEquipeUsuario();
-			equipeUser = equipe.addPersonagem(nome);
+			equipeUser = equipe.addPersonagem((String) comboBox.getSelectedItem());
 			System.out.println("equipe "+ equipeUser);
 			break;
 		}

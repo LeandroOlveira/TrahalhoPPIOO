@@ -1,0 +1,22 @@
+package ModeloEntidade;
+
+
+public class Flash extends Antagonista{
+	private int dano = 15;
+	private double quantidadeVida = 150;
+	
+	public double getQuantidadeVida() {
+		return quantidadeVida;
+	}
+
+	public void setQuantidadeVida(int quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+	
+
+}

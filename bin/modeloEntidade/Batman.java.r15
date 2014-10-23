@@ -1,0 +1,23 @@
+package ModeloEntidade;
+
+
+public class Batman extends Antagonista {
+	private int dano = 21;
+
+	
+	public Batman(){
+		super();
+		quantidadeVida = 21;
+		nome = "Batman";
+	}
+
+	public void setQuantidadeVida(int quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+
+}

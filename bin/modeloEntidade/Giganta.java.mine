@@ -1,0 +1,34 @@
+package ModeloEntidade;
+
+public class Giganta extends Protagonista{
+	private double fatorIncremento = 1/4;
+	
+	public Giganta(){
+		super();
+		quantidadeVida = 100;
+		nome = "Giganta";
+		dano = 10;
+	}
+	
+	public double getQuantidadeVida() {
+		return quantidadeVida;
+	}
+
+	public void setQuantidadeVida(double quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+	
+	
+	@Override
+	public int calcularFatorIncremento() {
+		int incremento =  (int) (this.getQuantidadeVida()*fatorIncremento);
+		return incremento;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+
+
+}

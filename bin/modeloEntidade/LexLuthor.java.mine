@@ -1,0 +1,25 @@
+package ModeloEntidade;
+
+
+public class LexLuthor extends Antagonista{
+	
+	public LexLuthor(){
+		quantidadeVida = 180;
+		nome = "Lex Luthor";
+		dano = 18;
+	}
+	
+	public double getQuantidadeVida() {
+		return quantidadeVida;
+	}
+
+	public void setQuantidadeVida(int quantidadeVida) {
+		this.quantidadeVida = quantidadeVida;
+	}
+
+	@Override
+	public int getDano() {
+		return dano;
+	}
+
+}
